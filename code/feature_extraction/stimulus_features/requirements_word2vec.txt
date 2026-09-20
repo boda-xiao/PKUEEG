@@ -1,0 +1,5 @@
+# Only the dependencies needed by extract_word2vec_100hz.py.
+# Tested with Python 3.10.20 on Linux.
+numpy==2.2.6
+scipy==1.15.3
+soundfile==0.14.0

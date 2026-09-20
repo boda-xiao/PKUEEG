@@ -1,0 +1,7 @@
+# Analysis/preprocessing direct dependencies; use an isolated Python 3.10 environment.
+# Preserve task-local lists and add the implicit FastICA/runtime requirements.
+-r ../code/technical_validation/pkueeg_requirements.txt
+-r ../code/speech_retrieval/requirements.txt
+scikit-learn>=1.3
+threadpoolctl>=3.0
+# Neural/acoustic feature extraction uses its own requirement files and models.

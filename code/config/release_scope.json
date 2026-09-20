@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "behavioral_accuracy": "deferred",
+  "technical_validation": "included",
+  "technical_validation_results": "excluded",
+  "speech_retrieval": "included",
+  "code_integration_date": "2026-09-19",
+  "code_integration_source": "PKUEEG_release_candidate_20260908",
+  "full_scientific_rerun_performed": false,
+  "historical_validation_reports": "excluded",
+  "description": "Technical-validation and speech-retrieval code is included after adaptation from the 20260908 candidate. Behavioral accuracy data, historical/internal validation reports and analysis results remain excluded. Behavioral analysis requires an explicit external table. Retrieval defaults use the available envelope and wav2vec2 features; word2vec arrays remain absent. All generated outputs must stay outside the release. The full scientific analyses have not been rerun for this integration, and the already published OpenNeuro 1.0.0 snapshot is unchanged."
+}

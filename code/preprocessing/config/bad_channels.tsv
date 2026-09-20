@@ -1,0 +1,76 @@
+participant_id	session_id	bad_channels
+sub-01	ses-day1	n/a
+sub-01	ses-day2	n/a
+sub-01	ses-day3	n/a
+sub-02	ses-day1	C3 PO4
+sub-02	ses-day2	n/a
+sub-02	ses-day3	n/a
+sub-03	ses-day1	n/a
+sub-03	ses-day2	n/a
+sub-03	ses-day3	n/a
+sub-04	ses-day1	PO4 C3 T7
+sub-04	ses-day2	n/a
+sub-04	ses-day3	P6
+sub-05	ses-day1	n/a
+sub-05	ses-day2	n/a
+sub-05	ses-day3	n/a
+sub-06	ses-day1	n/a
+sub-06	ses-day2	C3
+sub-06	ses-day3	n/a
+sub-07	ses-day1	n/a
+sub-07	ses-day2	n/a
+sub-07	ses-day3	n/a
+sub-08	ses-day1	P6
+sub-08	ses-day2	P6
+sub-08	ses-day3	n/a
+sub-09	ses-day1	PO4
+sub-09	ses-day2	C3 PO4
+sub-09	ses-day3	n/a
+sub-10	ses-day1	n/a
+sub-10	ses-day2	n/a
+sub-10	ses-day3	n/a
+sub-11	ses-day1	n/a
+sub-11	ses-day2	P6 T8
+sub-11	ses-day3	n/a
+sub-12	ses-day1	C3
+sub-12	ses-day2	PO4 C3
+sub-12	ses-day3	n/a
+sub-13	ses-day1	n/a
+sub-13	ses-day2	n/a
+sub-13	ses-day3	n/a
+sub-14	ses-day1	P6
+sub-14	ses-day2	PO4 C5
+sub-14	ses-day3	n/a
+sub-15	ses-day1	P6
+sub-15	ses-day2	n/a
+sub-15	ses-day3	n/a
+sub-16	ses-day1	P6
+sub-16	ses-day2	P6
+sub-16	ses-day3	n/a
+sub-17	ses-day1	C3
+sub-17	ses-day2	n/a
+sub-17	ses-day3	n/a
+sub-18	ses-day1	P6
+sub-18	ses-day2	P6 FPZ
+sub-18	ses-day3	n/a
+sub-19	ses-day1	n/a
+sub-19	ses-day2	P6
+sub-19	ses-day3	n/a
+sub-20	ses-day1	P6
+sub-20	ses-day2	n/a
+sub-20	ses-day3	n/a
+sub-21	ses-day1	P6
+sub-21	ses-day2	P6 F3
+sub-21	ses-day3	n/a
+sub-22	ses-day1	C3 F6
+sub-22	ses-day2	P6
+sub-22	ses-day3	n/a
+sub-23	ses-day1	P6
+sub-23	ses-day2	n/a
+sub-23	ses-day3	n/a
+sub-24	ses-day1	PO4
+sub-24	ses-day2	F1 P6
+sub-24	ses-day3	P3
+sub-25	ses-day1	P6 FC4
+sub-25	ses-day2	F1
+sub-25	ses-day3	CZ

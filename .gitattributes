@@ -1,0 +1,3 @@
+# Preserve imported source bytes and SHA-256 inventories on every platform.
+* -text
+*.npz binary

@@ -1,0 +1,16 @@
+{
+  "type": "static_pretrained_lexical_model_not_time_series_features",
+  "model": "fastText cc.zh.300.bin",
+  "pretrained_model_sha256": "9219907cb26988af70d3dbf471ca777fb21082bd2ea70189f4ac4bed508d82cf",
+  "lexicon_sha256": "87aa3ff9460f9e1ad2a2c20efc6ecd210149f26dbb31820fac49843cb69ba76c",
+  "n_words": 6144,
+  "dimensions": 300,
+  "n_character_average_fallbacks": 238,
+  "upstream_information": "https://fasttext.cc/docs/en/crawl-vectors.html",
+  "upstream_license": "CC-BY-SA-3.0",
+  "generation_inputs": [
+    "released word labels",
+    "independent pretrained model"
+  ],
+  "existing_time_major_feature_arrays_used": false
+}

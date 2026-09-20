@@ -1,0 +1,9 @@
+# Direct dependencies tested for the feature scripts (Python 3.10).
+# Install the matching PyTorch CUDA 12.4 build from its official wheel index.
+numpy==2.2.6
+scipy==1.15.3
+soundfile==0.14.0
+torch==2.6.0
+transformers==5.12.0
+tokenizers==0.22.2
+safetensors==0.8.0

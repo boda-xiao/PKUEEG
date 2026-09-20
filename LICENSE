@@ -1,0 +1,13 @@
+PKUEEG is released under the Creative Commons CC0 1.0 Universal dedication.
+See https://creativecommons.org/publicdomain/zero/1.0/ for the legal code.
+
+Attribution to the dataset authors and to Lin Handa for the source narrative text
+is requested as a scholarly norm and to preserve authorship information.
+
+For this code-only companion repository, the retained dedication applies to
+PKUEEG-authored material covered by the source release declaration. Third-party
+assets are excluded from that dedication and retain their own terms. In
+particular, code/feature_extraction/stimulus_features/word2vec_lexicon.npz is
+licensed under CC BY-SA 3.0, not CC0. See THIRD_PARTY_NOTICES.md and the notices
+stored beside the feature-extraction code. External models and data retain
+their respective licenses.

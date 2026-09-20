@@ -1,0 +1,189 @@
+{
+  "import_date": "2026-09-19",
+  "source_release": "PKUEEG_release_candidate_20260908",
+  "target_release": "PKUEEG_release_20260909",
+  "target_directory": "code/feature_extraction/stimulus_features",
+  "operation": "Add new files only into an existing directory; no replacement, renaming, moving, or new directories",
+  "existing_files_modified": false,
+  "existing_features_modified": false,
+  "existing_configuration_modified": false,
+  "public_openneuro_version_modified": false,
+  "model_weights_added": false,
+  "mfa_workflow_added": false,
+  "source_recipes": [
+    "code/stimulus_extraction_v2",
+    "code/mfa_bert_v3"
+  ],
+  "adaptations": [
+    "Package-relative 0909 paths",
+    "Unique flat-directory BERT module names",
+    "Explicit offline external model/alignment inputs",
+    "Fresh outside-release output guards",
+    "Current-layout validation/reporting",
+    "Additional story selection and lexical-sequence fingerprints"
+  ],
+  "scientific_recipe_policy": "Preserve source extraction algorithms; do not claim numerical equality with stored 0909 legacy features",
+  "external_requirements": [
+    "Pinned pretrained Chinese wav2vec2 model",
+    "Pinned pretrained BERT model",
+    "MFA v3 word/year alignment outputs for BERT rasterization",
+    "Documented Python dependencies and compiler for Brian2Hears"
+  ],
+  "files": [
+    {
+      "file": "extract_envelope.py",
+      "sha256": "00901e006d14653962c7f024530a9667ba99f3838bc358f1e00013a5d1d440f6",
+      "source_recipe_path": "code/stimulus_extraction_v2/extract_envelope.py",
+      "source_sha256": "00901e006d14653962c7f024530a9667ba99f3838bc358f1e00013a5d1d440f6",
+      "status": "source_bytes_unchanged"
+    },
+    {
+      "file": "extract_mel.py",
+      "sha256": "826ef91dc26b29803574dc23be547283303e9f1d701bf36664eeab2fd06fc1cf",
+      "source_recipe_path": "code/stimulus_extraction_v2/extract_mel.py",
+      "source_sha256": "828ece7f0e4ffe1a77f1b917727c282815c6f377dc1d2e5dc37e4fb7f09def3e",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "extract_chinese_wav2vec.py",
+      "sha256": "92d41aecf27bbf1ccb3582cc8e64da097bd5e4479af60d1c91e3eae6156179f7",
+      "source_recipe_path": "code/stimulus_extraction_v2/extract_chinese_wav2vec.py",
+      "source_sha256": "afced606253682922a98ad9a200835f3619b1cc7fa3ee8c370a950b2583e9841",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "extract_features.py",
+      "sha256": "a12d5c39103bb82604e2bf83c0956a6c88b6a20d38f9d1f0797cdedd34bd273e",
+      "source_recipe_path": "code/stimulus_extraction_v2/extract_features.py",
+      "source_sha256": "c0e01ba34972951c5892f3106b7f0fb831e2d3797b1dafad083cac709a972199",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "verify_features.py",
+      "sha256": "6562d0c579040b72dc05b1152e98935ae1812da0b25ecf925dd7d6bc0256597c",
+      "source_recipe_path": "code/stimulus_extraction_v2/verify_features.py",
+      "source_sha256": "ba0372cacd6b9785a42f1d3a429c3d1c9effddd20080856b2ce5a17282412b5f",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "test_mel.py",
+      "sha256": "3d5f61e4681dc8ba7c70e8017feba851eb555aa821ef6dda8839371254311bae",
+      "source_recipe_path": "code/stimulus_extraction_v2/test_mel.py",
+      "source_sha256": "3d5f61e4681dc8ba7c70e8017feba851eb555aa821ef6dda8839371254311bae",
+      "status": "source_bytes_unchanged"
+    },
+    {
+      "file": "test_chinese_wav2vec.py",
+      "sha256": "6915437eb8d24f9959f5fe8025300d7240f2e0db346da21a44d4d8e5d4985fda",
+      "source_recipe_path": "code/stimulus_extraction_v2/test_chinese_wav2vec.py",
+      "source_sha256": "6915437eb8d24f9959f5fe8025300d7240f2e0db346da21a44d4d8e5d4985fda",
+      "status": "source_bytes_unchanged"
+    },
+    {
+      "file": "test_safety.py",
+      "sha256": "ffbec0245fd384ef1598412f6415c82ea5a5570b95962c674ad7b2f5467009cb",
+      "source_recipe_path": "code/stimulus_extraction_v2/test_safety.py",
+      "source_sha256": "b761627a32ce37ed17129241ae98249d1e98e3e771d949eb317bd8df20ad5178",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "feature_extraction_v2_utils.py",
+      "sha256": "b75f2bd42138ad95be5d0c0b751cb942d98d95961cafd2cd3625720aabcd0910",
+      "source_recipe_path": null,
+      "source_sha256": null,
+      "status": "new_additive_support"
+    },
+    {
+      "file": "feature_extraction_v2_requirements.txt",
+      "sha256": "bb270a26f8cb930c18417eb60a63d4cb4e86d400952dc78e29c72738d4c16c04",
+      "source_recipe_path": "code/stimulus_extraction_v2/requirements.txt",
+      "source_sha256": "0dde51b6255cf38736319c70b7c07040c77c7c6580c190ca18ba6fbe90eb41fe",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "FEATURE_EXTRACTION_V2.md",
+      "sha256": "707db30fc57a2ef2c719a2026a6ad34f57fcfd49398a040c648bbe01e7964d8e",
+      "source_recipe_path": "code/stimulus_extraction_v2/README.md",
+      "source_sha256": "f419ba91df2ab878f9016d06d3df3e8f43ed3d4480026e11d2d52ba10840e5bd",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "FEATURE_EXTRACTION_V2_NOTICES.md",
+      "sha256": "3c1a13c068abe33387ca7eb4e54d5dc9fcbcf00760dffeea8660a04c32b523ef",
+      "source_recipe_path": "code/stimulus_extraction_v2/THIRD_PARTY_NOTICES.md",
+      "source_sha256": "e976a1e2ff5cc6bcf06ce9bf3f8c57e5330a5c5efaf709609f5f2d75d40f4014",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "extract_bert_v3.py",
+      "sha256": "dd068205dde5305fc84edba02174e3c890f1fdf4f2c8e8ccea93a49506e55f72",
+      "source_recipe_path": "code/mfa_bert_v3/extract_bert.py",
+      "source_sha256": "04a4ed24a47c8e93e125c5f54bf21d581041477bef67c17be2b61b2e40875987",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "rasterize_bert_v3.py",
+      "sha256": "225ba6170cf8c0779ea5c51372d96f3179dc18c2a4f60701e5c9693ab943edcd",
+      "source_recipe_path": "code/mfa_bert_v3/rasterize_bert.py",
+      "source_sha256": "343592281f62af38555a4b92a97e4ec109a7ed9a86809616215257284003e86e",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "bert_v3_common.py",
+      "sha256": "93fd4d6459e23accb4d71fa4572094a16cd12bbb16272e93b1440ff822c1bbff",
+      "source_recipe_path": "code/mfa_bert_v3/common.py",
+      "source_sha256": "65dbb5809e4cad5988538a608dbfe39c74303b227f9f56e11f83df1f54f8965e",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "bert_v3_model_checksums.json",
+      "sha256": "1493d89d1bc3a41403fa03ddddec2805cd8df65c9b642fb55c725346aa4589e0",
+      "source_recipe_path": "code/mfa_bert_v3/assets/bert/checksums.json",
+      "source_sha256": "09027c198178f6f2e6c207b86b24dae3aecd8fb46ea13c7c7b407559954427db",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "requirements_bert_v3.txt",
+      "sha256": "34a46c33ad3d542c748fd4f37a47681c4fd8648aa5e968d065990ae34608f43d",
+      "source_recipe_path": "code/mfa_bert_v3/requirements.txt",
+      "source_sha256": "34a46c33ad3d542c748fd4f37a47681c4fd8648aa5e968d065990ae34608f43d",
+      "status": "source_bytes_unchanged"
+    },
+    {
+      "file": "test_bert_v3.py",
+      "sha256": "38e9fada577faadf79c9e87c613ad70aefde0c1ccf32b507fd22796f62d2d809",
+      "source_recipe_path": null,
+      "source_sha256": null,
+      "status": "new_additive_support"
+    },
+    {
+      "file": "BERT_V3_EXTRACTION.md",
+      "sha256": "b62b7a73a35d7b34d7da33d1fb51ef9508d1f4859fe60a3395dc03f0492d20ae",
+      "source_recipe_path": "code/mfa_bert_v3/README.md",
+      "source_sha256": "db7eb95cabd462a2a45e50d5e4cb7ff60c6383f2b1ca00eb30e56033e02242a9",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "BERT_V3_THIRD_PARTY_NOTICES.md",
+      "sha256": "1b8cee62c289f3a0e532b6e69f1a5c19b3687fc8f1bc33abdd047cc70897e45d",
+      "source_recipe_path": "code/mfa_bert_v3/THIRD_PARTY_NOTICES.md",
+      "source_sha256": "04814a17629b822d62ad06e5e3b2f6a421007fdce70b65b764ec84adb157b73d",
+      "status": "adapted_for_0909"
+    },
+    {
+      "file": "BERT_V3_APACHE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_recipe_path": "code/mfa_bert_v3/assets/BERT_APACHE-2.0.txt",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "status": "source_bytes_unchanged"
+    },
+    {
+      "file": "FEATURE_EXTRACTION_IMPORT.md",
+      "sha256": "36369c19a86f517052f1018830a4e818179f8d8da55daf7dda1c1605727b4bad",
+      "source_recipe_path": null,
+      "source_sha256": null,
+      "status": "new_additive_support"
+    }
+  ],
+  "manifest_self_hash_not_included": true
+}

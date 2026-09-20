@@ -1,0 +1,74 @@
+# Per-day 100-Hz retrieval configuration adapted to the PKUEEG release inputs.
+# Paths are relative to this configuration file, not the working directory.
+
+paths:
+  eeg_dir: ../../derivatives/preproc_40hz
+  stimulus_dir: ../../derivatives/stimulus_features
+  output_dir: ../../../pkueeg_speech_retrieval_public_20260919
+
+features:
+  envelope:
+    subdir: envelope/envelope_100hz
+    pattern: "{trial}_envelope.npy"
+    source_sfreq: 100.0
+  wav2vec:
+    subdir: wav2vec2/wav2vec2_layer9_50hz
+    pattern: "story-{trial:02d}_wav2vec2-layer9.npy"
+    source_sfreq: 50.0
+  word2vec:
+    available: false
+    subdir: word2vec_100hz
+    pattern: "story-{trial:02d}_word2vec.npy"
+    source_sfreq: 100.0
+
+data:
+  eeg_sfreq: 250.0
+  analysis_sfreq: 100.0
+  trials: [1, 50]
+  day_trial_ranges:
+    day1: [1, 17]
+    day2: [18, 33]
+    day3: [34, 50]
+  early_device_trials: [1, 33]
+  late_device_trials: [34, 50]
+  # Release EEG is already in microvolts for all days. Do not scale Day 3 again.
+  device_scale:
+    early: 1.0
+    late: 1.0
+  common_average_reference: true
+  # Estimate normalization from training trials separately for each subject/day.
+  # Clip standardized EEG to [-20, 20].
+  eeg_clip_z: 20.0
+
+split:
+  seed: 20260805
+  n_validation_trials_per_day: 2
+  n_test_trials_per_day: 2
+
+decoder:
+  type: ridge
+  loss: mse
+  # To reconstruct the stimulus at time t, use EEG at t + lag.
+  lag_min_ms: 0.0
+  lag_max_ms: 500.0
+  lag_step_ms: 50.0
+  # Cxx and Cxy are divided by the number of time points before regularization.
+  alphas: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+  validation_metric: mse
+  target_std_floor: 1.0e-6
+  save_model: true
+
+evaluation:
+  window_lengths_sec: [3.0, 5.0, 10.0]
+  stride_fraction: 1.0
+  n_candidates: 5
+  negative_scope: same_trial
+  correlation: flattened_pearson
+  shuffle_candidates: true
+  save_test_reconstructions: false
+
+runtime:
+  subjects: all
+  feature_names: [envelope, wav2vec]
+  blas_threads: 16
+  log_level: INFO

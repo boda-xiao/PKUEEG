@@ -1,0 +1,61 @@
+paths:
+  raw_bids_dir: ../../..
+  preprocessed_dir: ../../../derivatives/preproc_40hz
+  stimulus_audio_dir: ../../../stimuli/audio
+  stimulus_envelope_dir: ../../../derivatives/stimulus_features/envelope/envelope_100hz
+  # Null selects an external sibling <release-name>_outputs directory.
+  output_dir: null
+
+dataset:
+  subjects: all
+  sessions: [ses-day1, ses-day2, ses-day3]
+  expected_trials:
+    ses-day1: [1, 17]
+    ses-day2: [18, 33]
+    ses-day3: [34, 50]
+  device:
+    ses-day1: NeuroScan
+    ses-day2: NeuroScan
+    ses-day3: Neuracle
+  raw_scale_to_uv:
+    ses-day1: 1.0e6
+    ses-day2: 1.0e6
+    ses-day3: 1.0e6
+
+analysis:
+  chunk_sec: 30.0
+  window_sec: 10.0
+  correlation_decimation: 20
+  distribution_decimation: 100
+  auxiliary_decimation: 10
+  stimulus_envelope_sfreq: 100.0
+  n_psd_chunks: 12
+  psd_fmin: 0.5
+  psd_fmax: 100.0
+  psd_nperseg_sec: 4.0
+  absolute_amplitude_uv: [100.0, 150.0, 200.0]
+  flat_difference_uv: 0.001
+  jump_difference_uv: 100.0
+  blink_robust_z: 6.0
+  artifact_robust_z: 4.0
+
+quality_thresholds:
+  flat_fraction: 0.05
+  high_amplitude_150_fraction: 0.05
+  jump_fraction: 0.001
+  median_reference_correlation: 0.40
+  robust_z: 5.0
+  session_bad_channel_fraction: 0.20
+  trial_bad_window_fraction: 0.20
+  window_high_amplitude_fraction: 0.05
+
+preprocessed:
+  # Released NPZ values are already microvolts, including day 3.
+  input_unit: uV
+  sampling_frequency: 250.0
+  late_trial_start: 34
+  scale_early: 1.0
+  scale_late: 1.0
+
+runtime:
+  log_level: INFO

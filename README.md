@@ -5,7 +5,7 @@ dataset with 25 participants, three recording days, and 50 stories (17/16/17
 stories by day).
 
 - **Data:** [PKUEEG on OpenNeuro](https://openneuro.org/datasets/ds008834)
-- **Published data snapshot:** [ds008834, version 1.0.2](https://openneuro.org/datasets/ds008834/versions/1.0.2)
+- **Published data snapshot:** [ds008834, version 1.0.3](https://openneuro.org/datasets/ds008834/versions/1.0.3)
 - **Code:** [boda-xiao/PKUEEG](https://github.com/boda-xiao/PKUEEG)
 - **Instructions:** [running the analyses](docs/RUNNING.md),
   [feature extraction](docs/FEATURES.md), and
